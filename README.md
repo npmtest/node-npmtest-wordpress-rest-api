@@ -1,0 +1,120 @@
+# test coverage for  [wordpress-rest-api (v0.8.0)](https://github.com/kadamwhite/wordpress-rest-api)  [![npm package](https://img.shields.io/npm/v/npmtest-wordpress-rest-api.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-wordpress-rest-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-wordpress-rest-api.svg)](https://travis-ci.org/npmtest/node-npmtest-wordpress-rest-api)
+#### A client for interacting with the WordPress REST API
+
+[![NPM](https://nodei.co/npm/wordpress-rest-api.png?downloads=true)](https://www.npmjs.com/package/wordpress-rest-api)
+
+| git-branch : | [alpha](https://github.com/npmtest/node-npmtest-wordpress-rest-api/tree/alpha)|
+|--:|:--|
+| coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.html/index.html)|
+| test-report : | [![test-report](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/test-report.html)|
+| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-wordpress-rest-api/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-wordpress-rest-api/tree/gh-pages/build)|
+
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.html/index.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-wordpress-rest-api%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/test-report.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-wordpress-rest-api/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-wordpress-rest-api%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-wordpress-rest-api/build/apidoc.html)
+
+![npmPackageListing](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/screenCapture.npmPackageDependencyTree.svg)
+
+
+
+# package.json
+
+```json
+
+{
+    "author": {
+        "name": "K.Adam White",
+        "url": "http://www.kadamwhite.com"
+    },
+    "bugs": {
+        "url": "https://github.com/kadamwhite/wordpress-rest-api/issues"
+    },
+    "dependencies": {
+        "bluebird": "^3.4.1",
+        "li": "^1.0.1",
+        "lodash": "^2.4.2",
+        "node.extend": "^1.1.5",
+        "parse-link-header": "^0.4.1",
+        "qs": "^6.2.0",
+        "route-parser": "0.0.4",
+        "superagent": "^1.8.3"
+    },
+    "deprecated": "MODULE RENAMED: This module has been renamed to \"wpapi\"",
+    "description": "A client for interacting with the WordPress REST API",
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.3.0",
+        "grunt": "^1.0.1",
+        "grunt-cli": "^1.2.0",
+        "grunt-contrib-jshint": "^1.0.0",
+        "grunt-contrib-yuidoc": "^1.0.0",
+        "istanbul": "^0.4.4",
+        "jscs": "^3.0.5",
+        "jscs-stylish": "^0.3.1",
+        "jshint": "^2.9.2",
+        "jshint-stylish": "^2.2.0",
+        "load-grunt-tasks": "^3.5.0",
+        "minimist": "^1.2.0",
+        "mocha": "^2.5.3",
+        "sandboxed-module": "^2.0.3",
+        "sinon": "^1.17.4",
+        "sinon-chai": "^2.8.0"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "819a0d0999a1253df078b4fc662eb4a22452049f",
+        "tarball": "https://registry.npmjs.org/wordpress-rest-api/-/wordpress-rest-api-0.8.0.tgz"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "gitHead": "042fa899d0a1ba1d6260b48b2c62758c9d4b9294",
+    "homepage": "https://github.com/kadamwhite/wordpress-rest-api",
+    "keywords": [
+        "api",
+        "client",
+        "cms",
+        "wordpress"
+    ],
+    "license": "MIT",
+    "main": "wp.js",
+    "maintainers": [
+        {
+            "name": "kadamwhite",
+            "email": "adam@kadamwhite.com"
+        }
+    ],
+    "name": "wordpress-rest-api",
+    "optionalDependencies": {},
+    "readme": "ERROR: No README data found!",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kadamwhite/wordpress-rest-api.git"
+    },
+    "scripts": {
+        "docs": "grunt yuidoc",
+        "download-endpoint-json": "node ./lib/data/generate-endpoint-response-json",
+        "jscs": "jscs Gruntfile.js wp.js lib tests --reporter node_modules/jscs-stylish/jscs-stylish.js",
+        "jshint": "jshint --reporter=node_modules/jshint-stylish/index.js Gruntfile.js wp.js lib tests",
+        "lint": "npm run jshint && npm run jscs || true",
+        "mocha": "_mocha tests --recursive --reporter=nyan",
+        "pretest": "npm run lint",
+        "test": "istanbul cover _mocha -- tests --recursive --reporter=nyan",
+        "test:all": "_mocha tests --recursive --reporter=nyan",
+        "test:ci": "npm run lint && istanbul cover _mocha -- tests/unit --recursive --reporter=list",
+        "test:integration": "_mocha tests/integration --recursive --reporter=nyan",
+        "test:unit": "_mocha tests/unit --recursive --reporter=nyan",
+        "watch": "grunt watch"
+    },
+    "version": "0.8.0"
+}
+```
+
+
+
+# misc
+- this document was created with [utility2](https://github.com/kaizhu256/node-utility2)
