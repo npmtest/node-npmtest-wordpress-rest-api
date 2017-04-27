@@ -1,6 +1,6 @@
 # npmtest-wordpress-rest-api
 
-#### test coverage for  [wordpress-rest-api (v0.8.0)](https://github.com/kadamwhite/wordpress-rest-api)  [![npm package](https://img.shields.io/npm/v/npmtest-wordpress-rest-api.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-wordpress-rest-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-wordpress-rest-api.svg)](https://travis-ci.org/npmtest/node-npmtest-wordpress-rest-api)
+#### basic test coverage for  [wordpress-rest-api (v0.8.0)](https://github.com/kadamwhite/wordpress-rest-api)  [![npm package](https://img.shields.io/npm/v/npmtest-wordpress-rest-api.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-wordpress-rest-api) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-wordpress-rest-api.svg)](https://travis-ci.org/npmtest/node-npmtest-wordpress-rest-api)
 
 #### A client for interacting with the WordPress REST API
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-wordpress-rest-api/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-wordpress-rest-api/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-wordpress-rest-api/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-wordpress-rest-api/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-wordpress-rest-api/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-wordpress-rest-api/build/coverage.html/index.html)
 
@@ -117,7 +117,8 @@
         "test:unit": "_mocha tests/unit --recursive --reporter=nyan",
         "watch": "grunt watch"
     },
-    "version": "0.8.0"
+    "version": "0.8.0",
+    "bin": {}
 }
 ```
 
